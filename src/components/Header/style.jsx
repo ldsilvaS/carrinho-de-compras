@@ -7,6 +7,7 @@ export const HeaderContainer = styled.header`
     width: 100vw;
     padding: 15px 10%;
     justify-content: space-between;
-    background: #00ff22;
+    background: #fff700;
+    z-index: 1;
 
 `
