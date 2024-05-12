@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import Header from "./components/Header/Header"
 import Item from "./components/Item/Item"
+import Provider from "./context/Provide"
+import Cart from "./components/Cart/Cart"
 
 function App() {
 
@@ -10,8 +12,11 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <Item/>
+      <Provider>
+        <Header/>
+        <Item/>
+        <Cart/>
+      </Provider>
     </>
   )
 }
