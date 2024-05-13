@@ -16,9 +16,10 @@ function Cart() {
 
     return ( 
         <CartContainer visible={divVisible} animationType={divVisible ? "slideIn" : "slideOut"}>
-            <CartItems>
+            {cartItems.length > 0 ? <CartItems>
                 {cartItems.map((cartItem) => <CartItem key={cartItem.id} data={cartItem}/>)}
-            </CartItems>
+            </CartItems> : <h1 className="not_items">Nenhum item encontrado!</h1>}
+            
             <CartTotal>
                 <h3 className="total">Valor total: </h3>
                 <h3 className="total_price">{formatCurrency(totalPrice)}</h3>

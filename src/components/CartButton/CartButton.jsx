@@ -5,7 +5,7 @@ import AppContext from "../../context/AppContext";
 
 
 function CartButton() {
-    const {divVisible, setDivVisible} = useContext(AppContext)
+    const {divVisible, setDivVisible, cartItems} = useContext(AppContext)
 
     const heandleShow = () => {
         setDivVisible(!divVisible)
@@ -15,7 +15,7 @@ function CartButton() {
         <>
             <ButtonContainer type="button" onClick={heandleShow}>
                 <FaShoppingCart/>
-                <span className="count">1</span>
+                {cartItems.length > 0 && <span className="count">{cartItems.length}</span>}
             </ButtonContainer>
         </> 
     );

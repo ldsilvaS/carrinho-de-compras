@@ -32,19 +32,27 @@ export const CartContainer = styled.div`
     background: #FBFBFB;
     animation: ${props => props.animationType === "slideOut" ? slideOut : slideIn} 0.5s ease;
 
+    .not_items {
+        font-size: 1.5em;
+    }
+
 
 `
 
 export const CartItems = styled.div`
     flex-grow:1 ;
     overflow: auto;
+
     
 `
 
 export const CartTotal = styled.div`
     display: flex;
     gap: 8px;
+    padding-top: 20px;
     align-items: center;
+    border-top: 2px solid #5F5F5F;
+    
 
     .total {
         font-size: 1.0em;
