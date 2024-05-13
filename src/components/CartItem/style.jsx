@@ -13,7 +13,6 @@ export const CartItemContainer = styled.div`
 
     .cart_item_image {
         width: 70px;
-        border: 2px solid black;
     }
 
     .cart_item_title {

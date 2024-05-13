@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import AppContext from "../../context/AppContext";
 import formatCurrency from "../../utils/formatCurrency";
 import { CartItemContainer } from "./style";
 import { BsCartDashFill } from "react-icons/bs";
@@ -5,6 +7,9 @@ import { BsCartDashFill } from "react-icons/bs";
 function CartItem({data}) {
 
     const {thumbnail, title, price} = data;
+    const {cartItems, totalPrice, setTotalPrice} = useContext(AppContext)
+
+    
 
     return ( 
         <CartItemContainer>
