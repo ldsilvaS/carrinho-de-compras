@@ -7,18 +7,21 @@ import AppContext from "../../context/AppContext";
 
 
 function Item() {
-
+    // Context
     const {items, setItems, loading, setLoading} = useContext(AppContext)
 
+
+
     useEffect(() => {
+        // Utilizando a api e setando a variável items com a resposta recebida pela api.
         api('Iphone').then((res) => {
             setItems(res);
         }).finally(() => {
-            setLoading(false)
+            setLoading(false) // Setando o carregamento com false, pois já recebemos os items.
         })
     }, [])
 
-    console.log(items)
+    // console.log(items)
 
     return ( 
         <>

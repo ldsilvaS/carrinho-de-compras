@@ -5,14 +5,18 @@ import { CartItemContainer } from "./style";
 import { BsCartDashFill } from "react-icons/bs";
 
 function CartItem({data}) {
-
+    // Variáveis puxadas da Api
     const {id, thumbnail, title, price} = data;
+
+    // Context
     const {setCartItems, cartItems} = useContext(AppContext)
+    
+    // A variável cartItems é utilizada para guardar os itens do carrinho
 
     const heandleRemove = () => {
-        const updatedItems = cartItems.filter((item) => item.id != id);
+        const updatedItems = cartItems.filter((item) => item.id != id); // Atualizando os valores de cartItems quando removemos algo do carrinho 
 
-        setCartItems(updatedItems)
+        setCartItems(updatedItems) // Setando a variável
     }
 
     return ( 

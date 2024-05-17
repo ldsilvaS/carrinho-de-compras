@@ -5,11 +5,14 @@ import AppContext from "../../context/AppContext";
 
 
 function CartButton() {
+    // Context
     const {divVisible, setDivVisible, cartItems} = useContext(AppContext)
 
     const heandleShow = () => {
-        setDivVisible(!divVisible)
+        setDivVisible(!divVisible) // Está variável esta relacionada á aparição da div de carrinho ou não. Ela está sendo utilizada em outro component, por isso é um context.
     }
+
+    // o cartItems.lenght informa a quatidade de items no carrinho.
 
     return (
         <>

@@ -5,9 +5,10 @@ import { CartContainer, CartItems, CartTotal, slideIn, slideOut } from "./style"
 import formatCurrency from "../../utils/formatCurrency";
 
 function Cart() {
-
+    // Context
     const {cartItems, totalPrice, setTotalPrice, divVisible} = useContext(AppContext)
 
+    // Faz o calculo do preço total dos itens do carrinho.
     setTotalPrice(cartItems.reduce((acc, item) => {
         return item.price + acc
     }, 0))

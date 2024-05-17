@@ -6,22 +6,27 @@ import AppContext from "../../context/AppContext";
 
 function Form() {
     
+    // Estado do input
     const [input, setInput] = useState("");
+
+    // Context
     const {setItems, setLoading} = useContext(AppContext)
 
 
     const heandleSearch = async (e) => {
         e.preventDefault();
 
-        setLoading(true);
-        const items = await api(input);
-        setItems(items)
-        setLoading(false);
+        setLoading(true);  // Aciono o loading da página
+
+        const items = await api(input); // Faço a utilização da api para buscar os items.     OBS: Api é um hook feito.
+        setItems(items) // Setando o item, com os valores recebido da api
+
+        setLoading(false); // Aciono o loading, retirando ele pois os items já carregaram
 
         
         
         setTimeout(() => {
-            setInput("");
+            setInput(""); // Limpando o input
         }, 1000)
         
 

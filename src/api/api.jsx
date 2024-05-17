@@ -1,10 +1,12 @@
 const api = async (query) => {
+    // Função de chamada de api
     const res = await fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${query}`);
 
-    const data = await res.json()
+    // Estou utilizando a variável query para transformar a pesquisa de uma forma dinâmica.
 
-    return data.results
+    const data = await res.json() // Transformo a resposta em json.
 
+    return data.results // Retorno o resultado
 
 }
 

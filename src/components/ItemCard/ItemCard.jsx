@@ -7,18 +7,22 @@ import AppContext from "../../context/AppContext";
 
 function ItemCard({data}) {
 
+    // Valores recebido da api
     const {title, thumbnail, price} = data;
 
+    // Context
     const {cartItems,setCartItems} = useContext(AppContext)
 
     const heandleAddCart = () => {
         
+        // Ele faz uma cópia de todos os items que já estão no carrinho e adiciona o novo item.
         setCartItems([...cartItems, data])
 
     }
 
     return (
 
+        // thumbnail.replace(/\w\.jpg/gi, "W.jpg") procura a letra que está seguida de um .jpg e a modifica.
         
 
        <CardContainer>
