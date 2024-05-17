@@ -1,8 +1,36 @@
-# React + Vite
+# Carrinho de compras em React
+<p>Projeto feito para a apredizagem de uma função que simula a adição e remoção de itens dentro de um carrinho.</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Utils
+<ul>
+  <li>Context</li>
+  <li>React Icons</li>
+  <li>Styled components</li>
+  <li>Api - Mercado Livre</li>
+</ul>
 
-Currently, two official plugins are available:
+# Clonando o repositório
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<ol>
+  <li>Crie uma pasta dentro do seu computador.</li>
+  <li>Abra a mesma com o Visual Studio Code</li>  
+</ol>
+
+## Comandos no terminal
+```
+# Clone o repositório #
+
+- git clone https://github.com/ldsilvaS/carrinho-de-compras.git
+
+# Instale todas as dependências #
+
+- npm install
+
+# Inicie o aplicativo #
+
+- npm run dev
+
+```
+
+      
+
